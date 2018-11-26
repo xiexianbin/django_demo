@@ -1,3 +1,7 @@
-from django.contrib import admin
+# -*- coding: utf-8 -*-
 
-# Register your models here.
+from django.contrib import admin
+from account_application.models import User
+
+
+admin.site.register(User)

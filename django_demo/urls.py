@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """django_demo URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -15,6 +16,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from account_application import views
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^account/', include('django.contrib.auth.urls')),
+    url(r'^$', views.index, name='index')
 ]
